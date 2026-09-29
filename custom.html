@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Custom Order — SheTailor</title>
+  <title>Custom Order — Myra Fashionista 🪡👗❤️</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -162,7 +162,7 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo">She<span>Tailor</span></div>
+    <div class="logo"><span>Myra</span> Fashionista 🪡👗❤️</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
@@ -277,21 +277,20 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 SheTailor. All rights reserved.</p>
-    <p>WhatsApp: +234 801 234 5678</p>
+    <p>© 2025 Myra Fashionista 🪡👗❤️. All rights reserved.</p>
+    <p>WhatsApp: +234 704 269 0874</p>
   </footer>
 
   <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20place%20a%20custom%20order"
+  <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20place%20a%20custom%20order"
      class="whatsapp-btn" target="_blank">💬</a>
 
   <!-- SCRIPT -->
   <script>
-    // ⚠️ CHANGE THIS to the real WhatsApp number (no +, no spaces)
-    const WHATSAPP_NUMBER = "2348012345678";
+    // ✅ YOUR REAL WHATSAPP NUMBER IS NOW HERE
+    const WHATSAPP_NUMBER = "2347042690874";
 
     function sendToWhatsApp() {
-      // Grab all values
       const name = document.getElementById('name').value.trim();
       const phone = document.getElementById('phone').value.trim();
       const email = document.getElementById('email').value.trim();
@@ -309,14 +308,13 @@
       const length = document.getElementById('length').value.trim();
       const notes = document.getElementById('notes').value.trim();
 
-      // Simple validation
       if (!name || !phone || !outfit || !style) {
         alert('Please fill in your name, phone, outfit type, and style description.');
         return;
       }
 
-      // Build the message
-      let msg = `*NEW CUSTOM ORDER — SheTailor*\n\n`;
+      // ✅ UPDATED TO MYRA FASHIONISTA
+      let msg = `*NEW CUSTOM ORDER — Myra Fashionista 🪡👗❤️*\n\n`;
       msg += `*— CUSTOMER —*\n`;
       msg += `Name: ${name}\n`;
       msg += `Phone: ${phone}\n`;
@@ -339,7 +337,6 @@
       if (length) msg += `Length: ${length}\n`;
       if (notes) msg += `\nNotes: ${notes}\n`;
 
-      // Encode and open WhatsApp
       const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
       window.open(url, '_blank');
     }
