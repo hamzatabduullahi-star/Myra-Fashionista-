@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Order — SheTailor</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #fff;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { font-size: 22px; font-weight: bold; }
+    .logo span { color: #e91e63; }
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+    nav a:hover { color: #e91e63; }
+    nav a.active { color: #e91e63; font-weight: bold; }
+
+    .page-title {
+      background: #fce4ec;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .page-title h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .page-title p { color: #666; font-size: 14px; }
+
+    .form-wrap {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 20px 60px;
+    }
+
+    .step {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .step-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #e91e63;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #444;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      font-family: inherit;
+      margin-bottom: 12px;
+      background: #fafafa;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #e91e63;
+      background: #fff;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .submit-btn:hover { background: #1da851; }
+
+    .note {
+      text-align: center;
+      font-size: 12px;
+      color: #888;
+      margin-top: 15px;
+    }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    footer {
+      background: #f9f9f9;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">She<span>Tailor</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="custom.html" class="active">Custom</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <section class="page-title">
+    <h1>Order Custom Design</h1>
+    <p>Fill this form and send to WhatsApp — we'll get back to you with a quote</p>
+  </section>
+
+  <!-- FORM -->
+  <div class="form-wrap">
+
+    <!-- STEP 1: Your Info -->
+    <div class="step">
+      <div class="step-title">1. Your Information</div>
+
+      <label>Full Name *</label>
+      <input type="text" id="name" placeholder="e.g. Amina Bello" required />
+
+      <label>Phone Number *</label>
+      <input type="tel" id="phone" placeholder="e.g. 08012345678" required />
+
+      <label>Email (optional)</label>
+      <input type="email" id="email" placeholder="you@email.com" />
+
+      <label>Delivery Address *</label>
+      <textarea id="address" placeholder="Street, city, state"></textarea>
+    </div>
+
+    <!-- STEP 2: The Design -->
+    <div class="step">
+      <div class="step-title">2. What Do You Want?</div>
+
+      <label>Type of Outfit *</label>
+      <select id="outfit">
+        <option value="">-- Select --</option>
+        <option>Dress</option>
+        <option>Top / Blouse</option>
+        <option>Skirt</option>
+        <option>Native / Traditional</option>
+        <option>Wedding / Occasion Wear</option>
+        <option>Two-piece Set</option>
+        <option>Other</option>
+      </select>
+
+      <label>Describe the Style You Want *</label>
+      <textarea id="style" placeholder="e.g. Long Ankara gown with off-shoulder sleeves and slit"></textarea>
+
+      <label>Fabric Preference</label>
+      <input type="text" id="fabric" placeholder="e.g. Ankara, lace, silk, chiffon" />
+
+      <label>Budget (₦)</label>
+      <input type="number" id="budget" placeholder="e.g. 25000" />
+
+      <label>When Do You Need It?</label>
+      <input type="date" id="delivery" />
+    </div>
+
+    <!-- STEP 3: Measurements -->
+    <div class="step">
+      <div class="step-title">3. Your Measurements (in inches)</div>
+      <p class="hint">
+        Don't know how to measure? No problem — just send the form and we'll guide you on WhatsApp.
+      </p>
+
+      <div class="grid-2">
+        <div>
+          <label>Bust</label>
+          <input type="number" id="bust" placeholder="e.g. 36" />
+        </div>
+        <div>
+          <label>Waist</label>
+          <input type="number" id="waist" placeholder="e.g. 30" />
+        </div>
+        <div>
+          <label>Hips</label>
+          <input type="number" id="hips" placeholder="e.g. 40" />
+        </div>
+        <div>
+          <label>Shoulder</label>
+          <input type="number" id="shoulder" placeholder="e.g. 15" />
+        </div>
+        <div>
+          <label>Sleeve Length</label>
+          <input type="number" id="sleeve" placeholder="e.g. 22" />
+        </div>
+        <div>
+          <label>Dress / Outfit Length</label>
+          <input type="number" id="length" placeholder="e.g. 45" />
+        </div>
+      </div>
+
+      <label>Extra Notes</label>
+      <textarea id="notes" placeholder="Anything else we should know?"></textarea>
+    </div>
+
+    <!-- SUBMIT -->
+    <button class="submit-btn" onclick="sendToWhatsApp()">
+      📱 Send Order on WhatsApp
+    </button>
+
+    <p class="note">
+      Your details will open in WhatsApp. Just hit send and we'll reply with a quote.
+    </p>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 SheTailor. All rights reserved.</p>
+    <p>WhatsApp: +234 801 234 5678</p>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20place%20a%20custom%20order"
+     class="whatsapp-btn" target="_blank">💬</a>
+
+  <!-- SCRIPT -->
+  <script>
+    // ⚠️ CHANGE THIS to the real WhatsApp number (no +, no spaces)
+    const WHATSAPP_NUMBER = "2348012345678";
+
+    function sendToWhatsApp() {
+      // Grab all values
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const outfit = document.getElementById('outfit').value;
+      const style = document.getElementById('style').value.trim();
+      const fabric = document.getElementById('fabric').value.trim();
+      const budget = document.getElementById('budget').value.trim();
+      const delivery = document.getElementById('delivery').value;
+      const bust = document.getElementById('bust').value.trim();
+      const waist = document.getElementById('waist').value.trim();
+      const hips = document.getElementById('hips').value.trim();
+      const shoulder = document.getElementById('shoulder').value.trim();
+      const sleeve = document.getElementById('sleeve').value.trim();
+      const length = document.getElementById('length').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+
+      // Simple validation
+      if (!name || !phone || !outfit || !style) {
+        alert('Please fill in your name, phone, outfit type, and style description.');
+        return;
+      }
+
+      // Build the message
+      let msg = `*NEW CUSTOM ORDER — SheTailor*\n\n`;
+      msg += `*— CUSTOMER —*\n`;
+      msg += `Name: ${name}\n`;
+      msg += `Phone: ${phone}\n`;
+      if (email) msg += `Email: ${email}\n`;
+      if (address) msg += `Address: ${address}\n\n`;
+
+      msg += `*— DESIGN —*\n`;
+      msg += `Outfit: ${outfit}\n`;
+      msg += `Style: ${style}\n`;
+      if (fabric) msg += `Fabric: ${fabric}\n`;
+      if (budget) msg += `Budget: ₦${budget}\n`;
+      if (delivery) msg += `Needed by: ${delivery}\n\n`;
+
+      msg += `*— MEASUREMENTS (inches) —*\n`;
+      if (bust) msg += `Bust: ${bust}\n`;
+      if (waist) msg += `Waist: ${waist}\n`;
+      if (hips) msg += `Hips: ${hips}\n`;
+      if (shoulder) msg += `Shoulder: ${shoulder}\n`;
+      if (sleeve) msg += `Sleeve: ${sleeve}\n`;
+      if (length) msg += `Length: ${length}\n`;
+      if (notes) msg += `\nNotes: ${notes}\n`;
+
+      // Encode and open WhatsApp
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
