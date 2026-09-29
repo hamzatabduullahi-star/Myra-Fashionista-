@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Myra Fashionista 🪡👗❤️</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; color: #333; line-height: 1.6; background: #fff; }
+    header {
+      background: #fff; border-bottom: 1px solid #eee; padding: 15px 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo { font-size: 22px; font-weight: bold; }
+    .logo span { color: #e91e63; }
+    nav a { margin-left: 15px; text-decoration: none; color: #333; font-size: 14px; }
+    nav a:hover { color: #e91e63; }
+    nav a.active { color: #e91e63; font-weight: bold; }
+
+    .page-title { background: #fce4ec; padding: 40px 20px; text-align: center; }
+    .page-title h1 { font-size: 28px; margin-bottom: 8px; }
+    .page-title p { color: #666; font-size: 14px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #f8f8f8;
+      aspect-ratio: 3 / 4;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .lightbox.active { display: flex; }
+    .lightbox img {
+      max-width: 100%;
+      max-height: 90%;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 15px; right: 20px;
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+      font-weight: bold;
+      background: rgba(0,0,0,0.5);
+      width: 45px; height: 45px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      line-height: 1;
+    }
+
+    .whatsapp-btn {
+      position: fixed; bottom: 20px; right: 20px;
+      background: #25D366; color: white;
+      width: 55px; height: 55px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 30px; text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 999;
+    }
+
+    footer {
+      background: #f9f9f9; padding: 30px 20px; text-align: center;
+      font-size: 14px; color: #777; border-top: 1px solid #eee; margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo"><span>Myra</span> Fashionista 🪡👗❤️</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="custom.html">Custom</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <section class="page-title">
+    <h1>Our Gallery</h1>
+    <p>Beautiful pieces we've sewn with love 🪡❤️</p>
+  </section>
+
+  <!-- GALLERY GRID -->
+  <section class="gallery" id="gallery">
+    <!-- ⚠️ REPLACE THE LINKS BELOW WITH YOUR DIRECT IMGUR LINKS (i.imgur.com/...) -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/Q43Mjjl.jpeg" alt="Myra Fashionista design 1" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/U1pE8Rx.jpeg" alt="Myra Fashionista design 2" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/IcYa3NW.jpeg" alt="Myra Fashionista design 3" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/OQ8wlrG.jpeg" alt="Myra Fashionista design 4" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/FEe6GbU.jpeg" alt="Myra Fashionista design 5" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/QFUheDS.jpeg" alt="Myra Fashionista design 6" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/6Y8C0yk.jpeg" alt="Myra Fashionista design 7" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/m8jAJZB.jpeg" alt="Myra Fashionista design 8" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/eRjDqfI.jpeg" alt="Myra Fashionista design 9" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/AcUgf61.jpeg" alt="Myra Fashionista design 10" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/zZT6PFZ.jpeg" alt="Myra Fashionista design 11" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="https://i.imgur.com/rrOeqwT.jpeg" alt="Myra Fashionista design 12" onerror="this.src='https://via.placeholder.com/300x400/fce4ec/e91e63?text=Myra+Fashionista'">
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close" onclick="closeLightbox(event)">×</span>
+    <img id="lightboxImg" src="" alt="Design">
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Myra Fashionista 🪡👗❤️. All rights reserved.</p>
+    <p>WhatsApp: +234 704 269 0874</p>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20saw%20your%20gallery%20and%20I%20want%20to%20order"
+     class="whatsapp-btn" target="_blank">💬</a>
+
+  <!-- LIGHTBOX SCRIPT -->
+  <script>
+    function openLightbox(el) {
+      const img = el.querySelector('img');
+      document.getElementById('lightboxImg').src = img.src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox(e) {
+      if (e) e.stopPropagation();
+      document.getElementById('lightbox').classList.remove('active');
+    }
+  </script>
+
+</body>
+</html>
