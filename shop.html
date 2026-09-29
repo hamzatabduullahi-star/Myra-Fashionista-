@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shop — SheTailor</title>
+  <title>Shop — Myra Fashionista 🪡👗❤️</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -168,7 +168,7 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo">She<span>Tailor</span></div>
+    <div class="logo"><span>Myra</span> Fashionista 🪡👗❤️</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="shop.html" class="active">Shop</a>
@@ -198,14 +198,13 @@
     <!-- PRODUCT 1 -->
     <div class="product" data-category="dress">
       <div class="product-img">
-        <!-- Replace 👗 with <img src="your-image-url"> -->
         👗
       </div>
       <div class="product-info">
         <h3>Floral Ankara Dress</h3>
         <p class="price">₦25,000</p>
         <p class="sizes">Sizes: S, M, L, XL</p>
-        <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20order%20the%20Floral%20Ankara%20Dress"
+        <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20order%20the%20Floral%20Ankara%20Dress"
            class="order-btn" target="_blank">
           Order on WhatsApp
         </a>
@@ -219,7 +218,7 @@
         <h3>Silk Blouse</h3>
         <p class="price">₦15,000</p>
         <p class="sizes">Sizes: S, M, L</p>
-        <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20order%20the%20Silk%20Blouse"
+        <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20order%20the%20Silk%20Blouse"
            class="order-btn" target="_blank">
           Order on WhatsApp
         </a>
@@ -233,7 +232,7 @@
         <h3>Pleated Midi Skirt</h3>
         <p class="price">₦18,000</p>
         <p class="sizes">Sizes: S, M, L, XL</p>
-        <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20order%20the%20Pleated%20Midi%20Skirt"
+        <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20order%20the%20Pleated%20Midi%20Skirt"
            class="order-btn" target="_blank">
           Order on WhatsApp
         </a>
@@ -247,7 +246,7 @@
         <h3>Lace Native Gown</h3>
         <p class="price">₦45,000</p>
         <p class="sizes">Sizes: 8, 10, 12, 14</p>
-        <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20order%20the%20Lace%20Native%20Gown"
+        <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20order%20the%20Lace%20Native%20Gown"
            class="order-btn" target="_blank">
           Order on WhatsApp
         </a>
@@ -261,7 +260,7 @@
         <h3>Bodycon Evening Dress</h3>
         <p class="price">₦30,000</p>
         <p class="sizes">Sizes: S, M, L</p>
-        <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20order%20the%20Bodycon%20Evening%20Dress"
+        <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20order%20the%20Bodycon%20Evening%20Dress"
            class="order-btn" target="_blank">
           Order on WhatsApp
         </a>
@@ -275,7 +274,7 @@
         <h3>Off-Shoulder Top</h3>
         <p class="price">₦12,000</p>
         <p class="sizes">Sizes: S, M, L</p>
-        <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20order%20the%20Off-Shoulder%20Top"
+        <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20order%20the%20Off-Shoulder%20Top"
            class="order-btn" target="_blank">
           Order on WhatsApp
         </a>
@@ -286,22 +285,20 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2025 SheTailor. All rights reserved.</p>
-    <p>WhatsApp: +234 801 234 5678</p>
+    <p>© 2025 Myra Fashionista 🪡👗❤️. All rights reserved.</p>
+    <p>WhatsApp: +234 704 269 0874</p>
   </footer>
 
   <!-- WHATSAPP BUTTON -->
-  <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20place%20an%20order"
+  <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20place%20an%20order"
      class="whatsapp-btn" target="_blank">💬</a>
 
   <!-- FILTER SCRIPT -->
   <script>
     function filterProducts(category, btn) {
-      // Highlight the clicked button
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
-      // Show/hide products
       document.querySelectorAll('.product').forEach(p => {
         if (category === 'all' || p.dataset.category === category) {
           p.style.display = 'block';
