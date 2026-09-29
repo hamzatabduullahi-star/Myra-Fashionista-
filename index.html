@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SheTailor — Beautiful Clothes Made For You</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .logo span { color: #e91e63; }
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+    nav a:hover { color: #e91e63; }
+    .hero {
+      background: #fce4ec;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    .hero h1 span { color: #e91e63; }
+    .hero p {
+      max-width: 500px;
+      margin: 0 auto 25px;
+      color: #555;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 5px;
+    }
+    .btn-primary {
+      background: #e91e63;
+      color: white;
+    }
+    .btn-outline {
+      border: 2px solid #e91e63;
+      color: #e91e63;
+    }
+    .section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 25px;
+      width: 250px;
+      text-align: left;
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: #e91e63;
+    }
+    .cta {
+      background: #e91e63;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .cta h2 { margin-bottom: 10px; }
+    .cta a {
+      background: white;
+      color: #e91e63;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    footer {
+      background: #f9f9f9;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">She<span>Tailor</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="custom.html">Custom</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Beautiful clothes,<br><span>made just for you.</span></h1>
+    <p>Shop ready-to-wear pieces or order a custom design tailored to your exact measurements.</p>
+    <a href="shop.html" class="btn btn-primary">Shop Ready-to-Wear</a>
+    <a href="custom.html" class="btn btn-outline">Order Custom Design</a>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section">
+    <h2>Why choose us?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Perfect Fit</h3>
+        <p>Made to your exact measurements.</p>
+      </div>
+      <div class="card">
+        <h3>Quality Fabric</h3>
+        <p>Only the best materials used.</p>
+      </div>
+      <div class="card">
+        <h3>Fast Delivery</h3>
+        <p>Nationwide and international shipping.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to look amazing?</h2>
+    <p>Place your order today and let's sew something beautiful.</p>
+    <a href="custom.html">Start Your Custom Order</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 SheTailor. All rights reserved.</p>
+    <p>WhatsApp: +234 801 234 5678</p>
+  </footer>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/2348012345678?text=Hello%20I%20want%20to%20place%20an%20order" 
+     class="whatsapp-btn" target="_blank">💬</a>
+
+</body>
+</html>
