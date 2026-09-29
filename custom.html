@@ -120,6 +120,7 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 10px;
+      font-family: inherit;
     }
     .submit-btn:hover { background: #1da851; }
 
@@ -165,8 +166,8 @@
     <div class="logo"><span>Myra</span> Fashionista 🪡👗❤️</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="shop.html">Shop</a>
       <a href="custom.html" class="active">Custom</a>
+      <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -264,9 +265,27 @@
       <textarea id="notes" placeholder="Anything else we should know?"></textarea>
     </div>
 
+    <!-- SEND INSPIRATION PICTURE -->
+    <div class="step" style="background:#fff8e1; border:2px dashed #ffb300;">
+      <div class="step-title" style="color:#ff8f00;">📷 Have a Picture of the Style?</div>
+      <p class="hint" style="color:#666;">
+        If you have a picture of the design you want (from Instagram, Pinterest, WhatsApp, etc.),
+        <strong>send it to us on WhatsApp</strong> so we can see exactly what you mean.
+      </p>
+      <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20here%20is%20a%20picture%20of%20the%20style%20I%20want"
+         target="_blank"
+         class="submit-btn"
+         style="background:#25D366; text-decoration:none; display:block; text-align:center;">
+        📷 Send Picture on WhatsApp
+      </a>
+      <p class="hint" style="margin-top:10px; margin-bottom:0; text-align:center; font-size:11px;">
+        Tap the 📎 (paperclip) icon in WhatsApp to attach your photo.
+      </p>
+    </div>
+
     <!-- SUBMIT -->
     <button class="submit-btn" onclick="sendToWhatsApp()">
-      📱 Send Order on WhatsApp
+      📱 Send Order Details on WhatsApp
     </button>
 
     <p class="note">
@@ -287,7 +306,6 @@
 
   <!-- SCRIPT -->
   <script>
-    // ✅ YOUR REAL WHATSAPP NUMBER IS NOW HERE
     const WHATSAPP_NUMBER = "2347042690874";
 
     function sendToWhatsApp() {
@@ -313,7 +331,6 @@
         return;
       }
 
-      // ✅ UPDATED TO MYRA FASHIONISTA
       let msg = `*NEW CUSTOM ORDER — Myra Fashionista 🪡👗❤️*\n\n`;
       msg += `*— CUSTOMER —*\n`;
       msg += `Name: ${name}\n`;
@@ -327,6 +344,9 @@
       if (fabric) msg += `Fabric: ${fabric}\n`;
       if (budget) msg += `Budget: ₦${budget}\n`;
       if (delivery) msg += `Needed by: ${delivery}\n\n`;
+
+      msg += `*— INSPIRATION PICTURE —*\n`;
+      msg += `📎 Please attach your reference picture here if you have one.\n\n`;
 
       msg += `*— MEASUREMENTS (inches) —*\n`;
       if (bust) msg += `Bust: ${bust}\n`;
