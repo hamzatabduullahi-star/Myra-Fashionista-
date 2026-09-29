@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Myra Fashionista 🪡👗❤️</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background: #fff;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { font-size: 22px; font-weight: bold; }
+    .logo span { color: #e91e63; }
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+    nav a:hover { color: #e91e63; }
+    nav a.active { color: #e91e63; font-weight: bold; }
+
+    .page-title {
+      background: #fce4ec;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .page-title h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .page-title p { color: #666; font-size: 14px; }
+
+    .contact-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 600px) {
+      .contact-container { grid-template-columns: 1fr; }
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+    .contact-card .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    .contact-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #e91e63;
+    }
+    .contact-card p {
+      color: #555;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+    .btn-whatsapp { background: #25D366; color: white; }
+    .btn-whatsapp:hover { background: #1da851; }
+    .btn-call { background: #e91e63; color: white; }
+    .btn-call:hover { background: #c2185b; }
+    .btn-map { background: #333; color: white; }
+    .btn-map:hover { background: #555; }
+
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    footer {
+      background: #f9f9f9;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo"><span>Myra</span> Fashionista 🪡👗❤️</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="custom.html">Custom</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- PAGE TITLE -->
+  <section class="page-title">
+    <h1>Get in Touch</h1>
+    <p>We would love to hear from you. Send us a message or visit our shop!</p>
+  </section>
+
+  <!-- CONTACT CARDS -->
+  <div class="contact-container">
+
+    <!-- WhatsApp Card -->
+    <div class="contact-card">
+      <div class="icon">💬</div>
+      <h3>WhatsApp</h3>
+      <p>+234 704 269 0874</p>
+      <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20make%20an%20enquiry" 
+         target="_blank" class="btn btn-whatsapp">
+        Chat on WhatsApp
+      </a>
+    </div>
+
+    <!-- Call Card -->
+    <div class="contact-card">
+      <div class="icon">📞</div>
+      <h3>Call Us</h3>
+      <p>+234 704 269 0874</p>
+      <a href="tel:+2347042690874" class="btn btn-call">
+        Call Now
+      </a>
+    </div>
+
+    <!-- Location Card -->
+    <div class="contact-card" style="grid-column: 1 / -1;">
+      <div class="icon">📍</div>
+      <h3>Visit Our Shop</h3>
+      <p>Kosobo<br>At the back of Asset Filling Station</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Kosobo+Asset+Filling+Station" 
+         target="_blank" class="btn btn-map">
+        Get Directions
+      </a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Myra Fashionista 🪡👗❤️. All rights reserved.</p>
+    <p>WhatsApp: +234 704 269 0874</p>
+  </footer>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/2347042690874?text=Hello%20Myra%20Fashionista,%20I%20want%20to%20place%20an%20order"
+     class="whatsapp-btn" target="_blank">💬</a>
+
+</body>
+</html>
